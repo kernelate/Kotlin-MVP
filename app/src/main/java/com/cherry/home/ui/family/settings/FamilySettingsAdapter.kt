@@ -74,7 +74,7 @@ class FamilySettingsAdapter @Inject constructor() : RecyclerView.Adapter<FamilyS
         init {
             ButterKnife.bind(itemView)
             childRL.setOnClickListener {
-                clickListener?.onClickMember(memberBean.homeId)
+                clickListener?.onClickMember(memberBean.memberId)
             }
         }
 

@@ -33,9 +33,6 @@ class FamilyMembersActivity : BaseActivity(), FamilyMembersView {
 
     private val TAG : String = "FamilyMembersActivity"
 
-    private val REQUEST_EXTERNAL_STORAGE = 1
-    private val PERMISSIONS_STORAGE = arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-
     private lateinit var name : String
 
     @Inject
@@ -127,7 +124,7 @@ class FamilyMembersActivity : BaseActivity(), FamilyMembersView {
             view.selectAlbum.setOnClickListener {
                 Log.d(TAG, "album album")
                 verifyStoragePermissions(this)
-                val intent = Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+                val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
                 startActivityForResult(intent, FamilyMembersPresenter.REQUEST_IMAGE)
 
                 dialog.dismiss()
@@ -183,8 +180,8 @@ class FamilyMembersActivity : BaseActivity(), FamilyMembersView {
             // We don't have permission so prompt the user
             ActivityCompat.requestPermissions(
                     activity,
-                    PERMISSIONS_STORAGE,
-                    REQUEST_EXTERNAL_STORAGE
+                    FamilyMembersPresenter.PERMISSIONS_STORAGE,
+                    FamilyMembersPresenter.REQUEST_EXTERNAL_STORAGE
             )
         }
     }

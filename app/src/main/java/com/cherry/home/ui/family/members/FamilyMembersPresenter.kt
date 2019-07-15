@@ -1,5 +1,6 @@
 package com.cherry.home.ui.family.members
 
+import android.Manifest
 import android.app.Activity
 import android.content.Intent
 import android.util.Log
@@ -21,14 +22,16 @@ class FamilyMembersPresenter @Inject constructor() : BasePresenter<FamilyMembers
     private var ERROR_PERMISSION_VALIDATE_FAILED = "PERMISSION_VALIDATE_FAILED"
 
     private lateinit var memberBean: MemberBean
+    private lateinit var iTuyaUser : User
 
     private var memberId : Long = 0
     private var homeId : Long = 0
     private var admin : Boolean = false
-    private lateinit var iTuyaUser : User
 
     companion object {
         internal val REQUEST_IMAGE : Int = 1
+        internal val REQUEST_EXTERNAL_STORAGE = 1
+        internal val PERMISSIONS_STORAGE = arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
     }
 
     fun init(memberId : Long, homeId : Long){

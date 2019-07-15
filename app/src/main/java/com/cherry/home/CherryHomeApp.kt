@@ -77,7 +77,7 @@ class CherryHomeApp : MultiDexApplication() {
             TuyaHomeSdk.setDebugMode(false)
         }
 
-        TuyaPanelSDK.init(this, "uep7j8ym8ka5gdc4fexf", "88fttu5anrf3tfytv3rqcpxdj7rtwsdt")
+        TuyaPanelSDK.init(this, getString(R.string.app_key), getString(R.string.secret_key))
 
     }
 
