@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.cherry.home.ui.main.Main2Activity">
+    <item
+        android:id="@+id/home_management"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        android:visible="false"
+        android:title="@string/home_management" />
+</menu>

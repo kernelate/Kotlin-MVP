@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_device_sharing"
+    >
+
+    <include
+        android:id="@+id/toolbar_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/toolbar_top"/>
+
+    <TextView
+        android:id="@+id/tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_add"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/mg_10"
+        android:text="@string/sharing_tips"
+        android:textSize="@dimen/mg_15"
+        android:background="#fff0b3"
+        />
+
+    <TextView
+        android:id="@+id/sharing_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tips"
+        android:layout_marginTop="@dimen/mg_5"
+        android:padding="@dimen/mg_10"
+        android:text="@string/sharing_list"
+        android:textColor="@color/gray_85"
+        android:textSize="@dimen/mg_15"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sharing_list_title"
+        android:padding="@dimen/mg_10"
+        android:scrollbars="vertical"/>
+
+    <TextView
+        android:id="@+id/add_sharing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/mg_15"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gradient_red_square"
+        android:text="@string/add_sharing"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        />
+
+
+
+</RelativeLayout>

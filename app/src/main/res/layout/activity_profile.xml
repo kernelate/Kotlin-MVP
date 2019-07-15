@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_gray"
+    android:id="@+id/profile_id"
+    >
+
+    <include
+        android:id="@+id/toolbar_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/toolbar_top"/>
+
+    <LinearLayout
+        android:id="@+id/ll_profile1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/mg_10"
+        android:paddingRight="@dimen/mg_10"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/mg_20"
+        android:paddingTop="@dimen/mg_5"
+        android:paddingBottom="@dimen/mg_5"
+        android:layout_below="@+id/toolbar_add"
+        >
+
+        <TextView
+            android:id="@+id/profile_photo_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_photo"
+            android:textSize="@dimen/mg_16"
+            android:layout_weight="1"
+            />
+
+        <ImageView
+            android:id="@+id/profile_photo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/nav_header_desc2"
+            android:padding="1dp"
+            app:srcCompat="@mipmap/nav_profile2"
+            android:layout_marginRight="@dimen/mg_10"
+            android:background="@drawable/bg_bt_circle"
+            android:scaleType="fitCenter"
+
+            />
+
+        <ImageView
+            android:id="@+id/profile_right_icon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_right_arrow_circular" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_profile2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingRight="@dimen/mg_10"
+        android:layout_below="@+id/ll_profile1"
+        android:paddingTop="@dimen/mg_5"
+        android:paddingBottom="@dimen/mg_5"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/profile_name_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name_profile"
+            android:textSize="@dimen/mg_16"
+            android:padding="@dimen/mg_10"
+            />
+
+        <TextView
+            android:id="@+id/profile_name_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/mg_15"
+            android:layout_marginRight="@dimen/mg_5"
+            android:textAlignment="textEnd"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_right_arrow_circular" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_profile3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_below="@+id/ll_profile2"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/mg_5"
+        android:paddingBottom="@dimen/mg_5"
+        >
+
+        <TextView
+            android:id="@+id/profile_email_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/mg_16"
+            android:padding="@dimen/mg_10"
+            android:text= "@string/email"/>
+
+        <TextView
+            android:id="@+id/profile_email_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/mg_15"
+            android:textAlignment="textEnd"
+            android:layout_marginRight="@dimen/mg_10"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_profile4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/ll_profile3"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/mg_20"
+        >
+
+        <LinearLayout
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location"
+                android:textSize="@dimen/mg_16"
+                android:padding="@dimen/mg_10"
+                />
+
+            <TextView
+                android:id="@+id/profile_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/mg_15"
+                android:padding="@dimen/mg_10"
+                android:layout_weight="2"
+                android:textAlignment="textEnd"
+                android:ellipsize="end"
+                android:singleLine="true"
+                />
+
+            <ImageView
+                android:id="@+id/location_right_icon"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/mg_10"
+                android:src="@drawable/ic_right_arrow_circular" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/timeZone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/timezone"
+                android:textSize="@dimen/mg_16"
+                android:padding="@dimen/mg_10"
+                />
+
+            <TextView
+                android:id="@+id/profile_timezone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/mg_15"
+                android:padding="@dimen/mg_10"
+                android:layout_weight="2"
+                android:textAlignment="textEnd"
+                android:ellipsize="end"
+                android:singleLine="true"
+
+                />
+
+            <ImageView
+                android:id="@+id/timezone_right_icon"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/mg_10"
+                android:src="@drawable/ic_right_arrow_circular" />
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/profile_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="@string/logout"
+        android:textColor="@color/white"
+        android:background="@drawable/gradient_red_square"
+        android:layout_alignParentBottom="true"
+        style="?android:attr/borderlessButtonStyle"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_circularProgressbar_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_50"
+        android:visibility="invisible"
+        >
+
+        <ProgressBar
+            android:id="@+id/circularProgressbar_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/progress"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

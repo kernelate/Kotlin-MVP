@@ -1,0 +1,215 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.github.ben-manes.versions'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+
+//    dexOptions {
+//        maxProcessCount 4
+//        preDexLibraries false
+//        javaMaxHeapSize "8g"
+//    }
+
+    defaultConfig {
+        applicationId "com.cherry.home"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1_618
+        versionName "1.6.18"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
+
+        def addConstant = { constantName, constantValue ->
+            manifestPlaceholders += [(constantName): constantValue]
+            buildConfigField "String", "${constantName}", "\"${constantValue}\""
+        }
+        addConstant("client_id", CLIENT_ID)
+        addConstant("secret", ACCESS_KEY)
+        addConstant("url", URL)
+
+        vectorDrawables.useSupportLibrary = true
+
+    }
+    buildTypes {
+        release {
+//            minifyEnabled true
+            minifyEnabled false
+//            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+
+            def addConstant = { constantName, constantValue ->
+                manifestPlaceholders += [(constantName): constantValue]
+                buildConfigField "String", "${constantName}", "\"${constantValue}\""
+            }
+            addConstant("hostAPI", HOST)
+            resValue "string", "app_key", APP_KEY
+            resValue "string", "secret_key", SECRET_KEY
+
+        }
+
+        debug {
+//            applicationIdSuffix ".debug"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            def addConstant = { constantName, constantValue ->
+                manifestPlaceholders += [(constantName): constantValue]
+                buildConfigField "String", "${constantName}", "\"${constantValue}\""
+            }
+            addConstant("hostAPI", DEMO_HOST)
+            resValue "string", "app_key", DEMO_KEY
+            resValue "string", "secret_key", DEMO_SECRET
+
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            def appName = "cherryhome"
+            outputFileName = appName + "-${variant.versionName}.apk"
+        }
+    }
+
+    sourceSets {
+        def commonTestDir = 'src/commonTest/java'
+        test {
+            java.srcDir commonTestDir
+        }
+        androidTest {
+            java.srcDir commonTestDir
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license/LICENSE.base64.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/MANIFEST.MF'
+
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+
+
+    lintOptions {
+        textOutput "stdout"
+        textReport true
+        checkAllWarnings true
+        warningsAsErrors true
+        showAll true
+        explainIssues true
+        abortOnError false
+        lintConfig file("$projectDir/lint.xml")
+        disable 'InvalidPackage'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    testOptions {
+        unitTests {
+            returnDefaultValues = true
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'com.squareup.okio:okio:1.11.0'
+        force "com.squareup.okhttp3:okhttp:3.5.0"
+    }
+}
+
+apply from: 'dependencies.gradle'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'org.jetbrains.kotlin:kotlin-reflect:1.3.0'
+    implementation supportLibs
+    implementation googlePlayLibs
+    implementation networkLibs
+    implementation rxJavaLibs
+    implementation otherLibs
+    debugImplementation debugLibs
+    releaseImplementation releaseLibs
+    implementation(glideOkhttp) {
+        exclude group: 'glide-parent'
+    }
+    debugImplementation(sherlock) {
+        transitive = true
+    }
+    // APT dependencies
+    kapt annotationProcessorLibs
+    kaptTest daggerCompiler
+    kaptAndroidTest daggerCompiler
+    testImplementation unitTestLibs
+    androidTestImplementation androidTestsLibs
+    testImplementation unitTestLibs
+    androidTestImplementation androidTestsLibs
+
+    /*Tuya SDK */
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-vector-drawable:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'com.tuya.smart:tuyasmart:3.9.6'
+    implementation 'com.alibaba:fastjson:1.1.67.android'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.6.0'
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+    implementation 'com.wnafee:vector-compat:1.0.5'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.android.support:design:28.0.0-alpha1'
+
+    //Panel
+    implementation 'com.facebook.react:react-native:0.51.0'
+    implementation 'com.airbnb.android:lottie:2.2.0'
+    implementation 'com.google.android.gms:play-services-maps:11.8.0'
+    implementation 'com.facebook.soloader:soloader:0.1.0'
+    implementation 'org.apache.commons:commons-compress:1.9'
+    implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    implementation 'com.kyleduo.switchbutton:library:1.4.2'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+
+
+}
+// Log out test results to console
+tasks.matching { it instanceof Test }.all {
+    testLogging.events = ["failed", "passed", "skipped"]
+}

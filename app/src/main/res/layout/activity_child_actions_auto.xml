@@ -1,0 +1,77 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_child_action_auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mg_80"
+    android:orientation="horizontal"
+    android:layout_marginRight="@dimen/mg_10"
+    >
+
+    <ImageView
+        android:id="@+id/iv_action"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/mg_10"
+        android:src="@drawable/ic_plug"
+        android:layout_gravity="center_vertical"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_action_auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/mg_10"
+        android:layout_gravity="center_vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_taskvalue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:gravity="bottom"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:id="@+id/tv_task_auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="task"
+                android:textSize="@dimen/mg_16"
+                android:layout_toRightOf="@+id/icon"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="@dimen/mg_10"
+                />
+
+            <TextView
+                android:id="@+id/tv_value_auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/mg_16"
+                android:layout_toRightOf="@+id/icon"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/black"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_device_name_auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/mg_13"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/gray_70"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/mg_10"
+            android:gravity="top"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

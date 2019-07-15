@@ -1,0 +1,102 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_child_action"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/mg_80"
+    android:orientation="horizontal"
+    android:layout_marginRight="@dimen/mg_10"
+    >
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:id="@+id/cardview"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--app:cardCornerRadius="@dimen/mg_10"-->
+    <!--&gt;-->
+
+    <ImageView
+        android:id="@+id/iv_action"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/mg_10"
+        android:background="@mipmap/nav_add"
+        android:layout_gravity="center_vertical"
+        />
+
+    <!--</android.support.v7.widget.CardView>-->
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_action"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/mg_10"
+        >
+
+        <TextView
+            android:id="@+id/tv_child_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="device"
+            android:textSize="@dimen/mg_16"
+            android:layout_toRightOf="@+id/icon"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            />
+
+        <TextView
+            android:id="@+id/tv_child_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="status"
+            android:textSize="@dimen/mg_13"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"
+            android:gravity="top"
+            />
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/tv_child_task_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="task:"
+        android:textSize="@dimen/mg_14"
+        android:layout_marginLeft="@dimen/mg_10"
+        android:layout_toRightOf="@+id/icon"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_vertical"
+        android:gravity="right"
+        />
+
+    <TextView
+        android:id="@+id/tv_child_task_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="value"
+        android:textSize="@dimen/mg_14"
+        android:layout_toRightOf="@+id/icon"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_vertical"
+        />
+
+
+
+
+
+
+</LinearLayout>

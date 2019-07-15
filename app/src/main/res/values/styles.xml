@@ -1,0 +1,186 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="drawerArrowStyle">@style/DrawerIcon</item>
+
+        <item name="colorControlNormal">@color/gray_99</item>
+        <item name="colorControlActivated">@color/black_black</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="DrawerIcon" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/white</item>
+    </style>
+
+
+    <style name="toolbar_action_text" parent="@android:style/Theme.Holo.Light">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="titleTextAppearance">@style/myActionTitleTextAppearance</item>
+    </style>
+
+    <style name="myActionTitleTextAppearance" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="android:textSize">@dimen/tuya_title_size</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="line_normal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/line_dip</item>
+        <item name="android:background">@color/line</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="toolbar_theme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
+    <style name="Button.Normal" parent="android:Widget.Button">
+        <item name="android:layout_height">@dimen/wh_36</item>
+        <item name="android:minWidth">@dimen/wh_88</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/ts_18</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:background">@drawable/button_orange</item>
+        <item name="android:textColor">@color/button_orange_text</item>
+    </style>
+
+    <style name="edit_text_input">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/edit_height</item>
+        <item name="android:background">@null</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:singleLine">true</item>
+        <!--<item name="android:textColorHint">?attr/list_secondary_color</item>-->
+        <!--<item name="android:textColor">?attr/list_primary_color</item>-->
+
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="colorControlHighlight">@color/accent</item>
+        <item name="colorButtonNormal">@color/primary</item>
+    </style>
+
+    <style name="ProgressBar.Normal" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:minWidth">23dp</item>
+        <item name="android:maxWidth">23dp</item>
+        <item name="android:minHeight">23dp</item>
+        <item name="android:maxHeight">23dp</item>
+        <item name="android:textColor">@color/color_626262</item>
+    </style>
+
+    <style name="TY.Progress.Dialog" parent="Theme.AppCompat.Dialog">
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:lineSpacingExtra">@dimen/wh_4</item>
+    </style>
+
+    <style name="editText" parent="AppTheme">
+        <item name="colorAccent">@color/color_accent</item>
+    </style>
+
+    <style name="Dialog.Alert.NoTitle" parent="@style/Dialog.Alert">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Dialog.Alert" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:lineSpacingExtra">@dimen/wh_4</item>
+    </style>
+
+    <style name="Dialog.Alert.Multichoice" parent="@style/Dialog.Alert">
+        <!--<item name="android:listChoiceIndicatorMultiple">@null</item>-->
+    </style>
+
+    <style name="Dialog.Alert.Singlechoice" parent="@style/Dialog.Alert">
+        <!--<item name="android:listChoiceIndicatorSingle">@null</item>-->
+    </style>
+
+    <style name="TY_List_Normal">
+        <item name="android:fadingEdge">none</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:divider">@color/line_color</item>
+        <item name="android:dividerHeight">@dimen/single_pix</item>
+        <item name="android:listDivider">@drawable/ty_color_line</item>
+        <item name="android:footerDividersEnabled">false</item>
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <item name="android:scrollbarThumbVertical">@drawable/ty_scrollbar_thumb</item>
+        <item name="android:scrollbarTrackVertical">@null</item>
+    </style>
+
+    <style name="ListItem.ItemNormal" parent="android:Widget">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">@dimen/ts_12</item>
+        <item name="android:paddingBottom">@dimen/ts_12</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:textColor">@color/text_color</item>
+    </style>
+
+    <style name="list_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:descendantFocusability">blocksDescendants</item>
+    </style>
+
+    <style name="HintTextStyle" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="AppTextField" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <item name="boxBackgroundColor">@android:color/white</item>
+    </style>
+
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!--buttons color-->
+        <item name="colorAccent">@android:color/holo_orange_dark</item>
+        <!--title and message color-->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!--dialog background-->
+        <item name="android:windowBackground">@drawable/background_dialog</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/round_dialog</item>
+    </style>
+
+    <style name="NumberPickerText">
+        <item name="android:textSize">60dp</item>
+    </style>
+
+</resources>

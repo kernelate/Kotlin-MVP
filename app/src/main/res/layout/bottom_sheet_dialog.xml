@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/textSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_picture_lbl"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/mg_20"
+        />
+
+    <TextView
+        android:id="@+id/selectAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_picture"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/mg_20"
+        android:layout_marginBottom="@dimen/mg_20"
+        />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:textColor="@color/white"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginTop="@dimen/mg_10"
+        android:background="@drawable/gradient_red_square"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/device_setting_id"
+    android:background="@color/light_gray"
+    >
+
+    <include
+        android:id="@+id/toolbar_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/toolbar_top"/>
+
+
+    <TextView
+        android:id="@+id/device_info_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_add"
+        android:textSize="@dimen/mg_13"
+        android:padding="@dimen/mg_10"
+        android:text= "@string/information"
+        android:textColor="@color/gray"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/mg_10"
+        android:background="@color/white"
+        android:layout_below="@+id/device_info_label"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/mg_16"
+            android:layout_weight="1"
+            android:text= "@string/device_setting_name"/>
+
+        <TextView
+            android:id="@+id/device_setting_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/mg_15"
+            android:textAlignment="textEnd"
+            android:layout_marginRight="@dimen/mg_5"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/child_image"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_right_arrow_circular" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/deviceloc_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/mg_10"
+        android:layout_below="@+id/ll_info"
+        >
+
+        <TextView
+            android:id="@+id/device_setting_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text= "@string/device_setting_location"
+            android:textSize="@dimen/mg_16"
+            />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/mg_10"
+            android:textSize="@dimen/mg_15"
+            android:textAlignment="textEnd"
+            android:layout_marginRight="@dimen/mg_5"
+            android:layout_weight="2"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:drawableRight="@drawable/ic_right_arrow_circular"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/device_setting_others"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/deviceloc_linear"
+        android:textSize="@dimen/mg_15"
+        android:padding="@dimen/mg_10"
+        android:text= "@string/ty_add_share_relation_item7"
+        android:textColor="@color/gray"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/ll_others"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_below="@+id/device_setting_others"
+        >
+
+        <TextView
+            android:id="@+id/device_setting_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/mg_16"
+            android:padding="@dimen/mg_10"
+            android:drawableRight="@drawable/ic_right_arrow_circular"
+            android:text= "@string/share_device"/>
+
+        <TextView
+            android:id="@+id/device_setting_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/mg_16"
+            android:padding="@dimen/mg_10"
+            android:visibility="gone"
+            android:drawableRight="@drawable/ic_right_arrow_circular"
+            android:text= "@string/create_group"/>
+
+        <TextView
+            android:id="@+id/device_setting_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/mg_16"
+            android:padding="@dimen/mg_10"
+            android:visibility="gone"
+            android:drawableRight="@drawable/ic_right_arrow_circular"
+            android:text= "@string/device_information"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/ll_view"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/ll_others"
+        />
+
+    <Button
+        android:id="@+id/device_setting_remove"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_view"
+        android:background="@color/white"
+        android:text= "@string/remove_device"
+        android:textColor="@color/red"
+        />
+
+</RelativeLayout>

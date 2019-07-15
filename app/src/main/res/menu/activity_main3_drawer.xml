@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/nav_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_scenario"
+            android:icon="@drawable/nav_scenario"
+            android:actionLayout="@layout/spinner"
+            android:title="Scenario"
+            />
+        <!--<item-->
+            <!--android:id="@+id/nav_settings"-->
+            <!--android:icon="@drawable/nav_settings"-->
+            <!--android:title="Settings" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_services"-->
+            <!--android:icon="@drawable/nav_services"-->
+            <!--android:title="Services" />-->
+        <item
+            android:id="@+id/nav_home_management"
+            android:icon="@drawable/nav_aboutus"
+            android:title="Home Management" />
+
+    </group>
+
+    <item android:title="Room Management">
+        <menu>
+            <item
+                android:id="@+id/nav_livingroom"
+                android:icon="@drawable/nav_living"
+                android:title="Living Room" />
+            <item
+                android:id="@+id/nav_diningroom"
+                android:icon="@drawable/nav_dinning"
+                android:title="Dining Room" />
+            <item
+                android:id="@+id/nav_bedroom"
+                android:icon="@drawable/nav_bedroom"
+                android:title="Bedroom" />
+            <item
+                android:id="@+id/nav_kitchen"
+                android:icon="@drawable/nav_kitchen"
+                android:title="Kitchen" />
+        </menu>
+    </item>
+
+</menu>

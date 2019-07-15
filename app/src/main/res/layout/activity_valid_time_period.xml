@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_30"
+    android:id="@+id/rl_time_period"
+    >
+
+    <include
+        android:id="@+id/action_bar_layout"
+        layout="@layout/toolbar_top"/>
+
+    <LinearLayout
+        android:id="@+id/ll_time_period"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/mg_10"
+        android:background="@color/white"
+        android:layout_below="@+id/action_bar_layout"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/mg_20"
+        >
+
+        <TextView
+            android:id="@+id/lbl_current_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/mg_16"
+            android:layout_weight="1"
+            android:text= "@string/current_city"/>
+
+        <TextView
+            android:id="@+id/tv_current_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/mg_5"
+            android:textSize="@dimen/mg_15"
+            android:textAlignment="textEnd"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_weight="1"
+            />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_right_arrow_circular" />
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/lbl_valid_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_time_period"
+        android:text="@string/valid_time"
+        android:layout_marginTop="@dimen/mg_20"
+        android:paddingLeft="@dimen/mg_15"
+        android:layout_marginBottom="@dimen/mg_10"
+        android:textSize="@dimen/mg_14"
+        />
+
+    <RadioGroup
+        android:id="@+id/rg_vaild"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_valid_time"
+        android:background="@color/white"
+        android:paddingRight="@dimen/mg_10"
+        android:paddingTop="@dimen/mg_10"
+        android:paddingBottom="@dimen/mg_10"
+        android:paddingLeft="@dimen/mg_5"
+        >
+
+        <RadioButton
+            android:id="@+id/rb_all_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:text="@string/all_day"
+            android:textSize="@dimen/mg_16"
+            android:button="@drawable/custom_checkbox"
+            android:padding="@dimen/mg_10"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:text="@string/day"
+            android:textSize="@dimen/mg_16"
+            android:button="@drawable/custom_checkbox"
+            android:padding="@dimen/mg_10"
+            />
+
+        <RadioButton
+            android:id="@+id/night"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:text="@string/night"
+            android:textSize="@dimen/mg_16"
+            android:button="@drawable/custom_checkbox"
+            android:padding="@dimen/mg_10"
+            />
+
+        <RadioButton
+            android:id="@+id/customized"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:text="@string/custom_day"
+            android:textSize="@dimen/mg_16"
+            android:button="@drawable/custom_checkbox"
+            android:padding="@dimen/mg_10"
+            />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/ll_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/mg_10"
+        android:background="@color/white"
+        android:layout_below="@+id/rg_vaild"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/mg_20"
+        >
+        <TextView
+            android:id="@+id/lbl_repeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/mg_16"
+            android:layout_weight="1"
+            android:text="@string/ty_timer_repeat"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_repeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/mg_5"
+            android:textSize="@dimen/mg_15"
+            android:textAlignment="textEnd"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_right_arrow_circular" />
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

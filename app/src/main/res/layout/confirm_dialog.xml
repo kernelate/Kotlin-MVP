@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/verification_link"
+        android:textStyle="bold"
+        android:textSize="@dimen/mg_14"
+        android:layout_margin="@dimen/mg_20"
+        android:drawableLeft="@drawable/ic_checked96"
+        android:gravity="center_horizontal"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/verify_email"
+        android:textStyle="bold"
+        android:textSize="@dimen/mg_14"
+        android:layout_margin="@dimen/mg_20"
+        android:gravity="center_horizontal"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="4dip"
+            android:layout_marginRight="4dip"
+            android:background="?android:attr/dividerVertical"
+            android:layout_alignParentTop="true"/>
+
+
+        <Button
+            android:id="@+id/verify_ok"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@android:string/ok"
+
+            android:layout_toRightOf="@id/ViewColorPickerHelper"/>
+    </RelativeLayout>
+
+</LinearLayout>

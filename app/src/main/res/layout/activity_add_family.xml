@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/add_family_id"
+    >
+
+    <include
+        android:id="@+id/toolbar_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/toolbar_top"/>
+
+
+    <LinearLayout
+        android:id="@+id/familyname_linear"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/mg_5"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_add">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Family Name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/mg_15"
+            />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="wrap_content"
+            android:hint="Please enter family name"
+            android:layout_weight="2"
+            android:layout_marginLeft="@dimen/mg_15"
+            android:textCursorDrawable="@null"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/mg_15"
+            android:theme="@style/editText"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/familyloc_linear"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/mg_5"
+        android:padding="5dp"
+        android:layout_below="@+id/familyname_linear"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Family Location"
+            android:textColor="@color/black"
+            android:textSize="@dimen/mg_15"
+            />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:hint="Set Location"
+            android:layout_marginLeft="@dimen/mg_10"
+            android:textSize="@dimen/mg_15"
+            android:textColor="@color/gray"
+            android:layout_weight="2"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:drawableRight="@drawable/ic_right_arrow_circular"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/btn_create"
+        android:layout_width="match_parent"
+        android:text="Create"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gray_button_bg"
+        android:textColor="@color/white"
+        android:enabled="false"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+
+</RelativeLayout>

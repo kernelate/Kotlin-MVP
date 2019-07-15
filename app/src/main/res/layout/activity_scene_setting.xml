@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scene_setting_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_30"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_add"
+        layout="@layout/toolbar_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/rl_editname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_add"
+        android:layout_marginLeft="@dimen/mg_10"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="@dimen/mg_10"
+        android:background="@drawable/round_corner">
+
+        <android.support.v7.widget.CardView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardview"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:cardCornerRadius="@dimen/mg_10"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl_editname_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="fitXY"
+                    android:background="@color/gray"
+                    android:adjustViewBounds="true" />
+
+                <TextView
+                    android:id="@+id/tv_scene_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/mg_20"
+                    android:drawableRight="@drawable/ic_edit"
+                    android:text="@string/edit_name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/mg_20" />
+
+                <ImageView
+                    android:id="@+id/scene_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/mg_20"
+                    android:layout_marginBottom="@dimen/mg_20"
+                    android:src="@drawable/ic_img" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/ll_carry_actions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardview"
+            android:layout_marginLeft="@dimen/mg_20"
+            android:layout_marginTop="@dimen/mg_10"
+            android:layout_marginRight="@dimen/mg_20"
+            android:layout_marginBottom="@dimen/mg_10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/carry_out_actions"
+                android:textColor="@color/black"
+                android:textSize="@dimen/mg_12"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_add_scene"
+                android:layout_width="@dimen/mg_20"
+                android:layout_height="@dimen/mg_20"
+                android:background="@drawable/ic_redplus24"
+                />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_add_action"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/ll_carry_actions"
+            android:layout_marginLeft="@dimen/mg_20"
+            android:layout_marginRight="@dimen/mg_20"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/dotted"
+            android:text="@string/add_actions" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_carry_actions"
+            android:visibility="gone"
+            android:scrollbars="vertical"/>
+
+        <View
+            android:id="@+id/view_linesepa"
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:layout_marginLeft="@dimen/mg_10"
+            android:layout_marginRight="@dimen/mg_10"
+            android:visibility="gone"
+            android:layout_below="@+id/ll_carry_actions"
+            android:background="@color/gray_gray"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/tv_delete_scene"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/delete_smart"
+        android:textSize="@dimen/mg_15"
+        android:layout_below="@+id/rl_editname"
+        android:layout_marginTop="@dimen/mg_10"
+        android:layout_marginRight="@dimen/mg_10"
+        android:layout_marginLeft="@dimen/mg_10"
+        android:textColor="@color/white"
+        android:background="@drawable/gradient_red"
+        style="?android:attr/borderlessButtonStyle"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>

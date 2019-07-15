@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cherry.home">
+    <!-- sdcard -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 网络 -->
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 定位 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false"/>
+
+
+
+    <application
+        android:name=".CherryHomeApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/cherryhome_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/cherryhome_logo"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="TUYA_SMART_APPKEY"
+            android:value="@string/app_key"/>
+        <meta-data
+            android:name="TUYA_SMART_SECRET"
+            android:value="@string/secret_key" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
+        <activity
+            android:name=".ui.base.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.login.LoginActivity"/>
+        <activity android:name=".ui.signup.SignupActivity" />
+        <activity android:name=".ui.main.MainActivity"/> <!-- Add the necessary service和receiver -->
+        <!-- Add from 1.13.13 which the com.tuya.smart.MqttService replaced the org.eclipse.paho.android.service.MqttService -->
+        <activity android:name=".ui.device.add.AddDeviceActivity"/>
+        <activity android:name=".ui.device.category.socket.ListSocketActivity"/>
+        <activity android:name=".ui.device.category.smartswitch.SwitchActivity"/>
+        <activity android:name=".ui.device.category.sensor.SensorActivity"/>
+        <activity android:name=".ui.device.category.remote.RemoteActivity"/>
+        <activity android:name=".ui.device.config.ec.ECActivity"/>
+        <activity android:name=".ui.device.config.ec.ECBindActivity"/>
+        <activity android:name=".ui.family.add.AddFamilyActivity"/>
+        <activity android:name=".ui.family.empty.EmptyFamilyActivity"/>
+        <activity android:name=".ui.device.config.AddDeviceTipActivity"/>
+        <activity android:name=".ui.device.config.ap.AddDeviceAPTipActivity"/>
+        <activity android:name=".ui.device.setting.DeviceSettingActivity"/>
+        <activity android:name=".ui.profile.ProfileActivity"/>
+        <activity android:name=".ui.signup.forgotpass.ForgotPasswordActivity"/>
+        <activity android:name=".ui.signup.forgotpass.validate.CodeValidationActivity"/>
+        <activity android:name=".ui.signup.forgotpass.validate.SuccessActivity"/>
+        <activity android:name="com.cherry.home.ui.scenario.scene.action.SActionActivity"/>
+        <activity android:name="com.cherry.home.ui.scenario.scene.settings.SSettingsActivity"/>
+        <activity android:name=".ui.scenario.addsmart.AddSmartActivity"/>
+        <activity android:name="com.cherry.home.ui.scenario.automation.settings.AutoActivity"/>
+        <activity android:name="com.cherry.home.ui.scenario.scene.function.SFunctionActivity"/>
+        <activity android:name="com.cherry.home.ui.scenario.scene.control.SControlActivity"/>
+        <activity android:name=".ui.scenario.scenebg.SceneBackgroundActivity"/>
+        <activity android:name=".ui.device.location.DeviceLocationActivity"/>
+        <activity android:name=".ui.device.sharing.DeviceSharingActivity"/>
+        <activity android:name=".ui.family.settings.FamilySettingsActivity"/>
+        <activity android:name=".ui.family.members.FamilyMembersActivity"/>
+        <activity android:name="com.cherry.home.ui.scenario.automation.condition.ACondActivity"/>
+        <activity android:name="com.cherry.home.ui.scenario.automation.action.AActionActivity"/>
+        <activity android:name="com.cherry.home.ui.scenario.automation.conditionaction.AConActionActivity"/>
+        <activity android:name="com.cherry.home.ui.scenario.automation.function.AFunctionActivity"/>
+        <activity android:name="com.cherry.home.ui.scenario.automation.control.AControlActivity"/>
+        <activity android:name=".ui.profile.timezone.TimeZoneActivity"/>
+        <activity android:name=".util.map.MapsActivity"/>
+        <activity android:name=".ui.scenario.autosettings.timeperiod.TimePeriodActivity"/>
+        <activity android:name=".ui.scenario.autosettings.timeperiod.repeat.RepeatActivity"/>
+        <activity
+            android:name="com.tuya.sdk.panel.base.activity.ToolbarActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.tuya.sdk.panel.base.activity.WifiDevicePanelActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.tuya.sdk.panel.base.activity.WifiGroupPanelActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.tuya.sdk.panel.base.activity.MeshDevicePanelActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.tuya.sdk.panel.base.activity.MeshGroupPanelActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.tuya.sdk.panel.alarm.activity.GroupAddAlarmActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.tuya.sdk.panel.alarm.activity.GroupAlarmActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.tuya.sdk.panel.alarm.activity.AlarmActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.tuya.sdk.panel.alarm.activity.AlarmSettingActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.tuya.sdk.panel.alarm.activity.AlarmOptionActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.tuya.sdk.panel.alarm.activity.NewDpAlarmActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.tuya.sdk.panel.alarm.activity.NewDpAlarmSettingActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <service android:name="com.tuya.smart.mqtt.MqttService" />
+        <!--
+ Deprecated By 1.13.13
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+        -->
+        <receiver
+            android:name="com.tuya.smart.android.base.broadcast.NetworkBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- The below code is for android OS version below N -->
+        <receiver
+            android:name=".util.ConnectivityReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.tuya.smart.android.hardware.service.GwBroadcastMonitorService"
+            android:exported="true"
+            android:label="UDPService"
+            android:process=":monitor">
+            <intent-filter>
+                <action android:name="tuya.intent.action.udp" />
+
+                <!-- Add from 1.9.9, which DevTransferService replaced the GwTransferService -->
+
+                <category android:name="tuya" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.tuya.smart.android.hardware.service.DevTransferService"
+            android:exported="true"
+            android:label="TCPService"
+            android:process=":transfer"
+            tools:replace="android:process">
+            <intent-filter>
+                <action android:name="tuya.intent.action.tcp" />
+
+                <category android:name="tuya" />
+            </intent-filter>
+        </service>
+
+
+        <!-- 核心service，心跳包基于此service -->
+        <!--<service-->
+            <!--android:name="com.orvibo.homemate.service.ViCenterService"-->
+            <!--android:exported="false">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.vihome.service"/>-->
+            <!--</intent-filter>-->
+        <!--</service>-->
+        <!--&lt;!&ndash; 用于保证app存活 &ndash;&gt;-->
+        <!--<service-->
+            <!--android:name="com.orvibo.homemate.core.keeplive.HomeMateKeepLiveJobService"-->
+            <!--android:label="@string/app_name"-->
+            <!--android:permission="android.permission.BIND_JOB_SERVICE"/>-->
+
+    </application>
+
+</manifest>

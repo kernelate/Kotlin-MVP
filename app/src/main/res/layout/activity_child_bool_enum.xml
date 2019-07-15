@@ -1,0 +1,44 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_child_control"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/ll_child_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/tv_child_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="Marshmallow"
+            android:textSize="@dimen/mg_14"
+            android:padding="@dimen/mg_15"
+            android:layout_marginLeft="@dimen/mg_10"
+            android:layout_toRightOf="@+id/icon"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_bool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/mg_5"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

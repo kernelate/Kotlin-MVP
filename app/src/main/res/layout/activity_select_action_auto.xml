@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_30"
+    android:id="@+id/select_action_auto_id"
+    >
+
+    <include
+        android:id="@+id/toolbar_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/toolbar_top"/>
+
+    <LinearLayout
+        android:id="@+id/ll_execute_scene"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_trigger"
+        android:gravity="center"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:id="@+id/icon_execute_scene"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mg_10"
+            android:src="@drawable/ic_home"
+            />
+
+        <TextView
+            android:id="@+id/lbl_execute_scene"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="@string/execute_scene"
+            android:textSize="@dimen/mg_15"
+            android:padding="@dimen/mg_5"
+            android:layout_toRightOf="@+id/icon"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black"
+            android:drawableRight="@drawable/ic_right_arrow_circular"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_trigger_auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_add"
+        android:background="@color/white"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/icon_trigger_auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mg_10"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_trigger"
+            />
+
+        <TextView
+            android:id="@+id/lbl_trigger_auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="@string/trigger"
+            android:textSize="@dimen/mg_15"
+            android:padding="@dimen/mg_5"
+            android:layout_toRightOf="@+id/icon"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black"
+            android:drawableRight="@drawable/ic_right_arrow_circular"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_reminder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:id="@+id/icon_reminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mg_10"
+            android:src="@drawable/ic_bell"
+            />
+
+        <TextView
+            android:id="@+id/lbl_reminder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="@string/send_reminder"
+            android:textSize="@dimen/mg_15"
+            android:padding="@dimen/mg_5"
+            android:layout_toRightOf="@+id/icon"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black"
+            android:drawableRight="@drawable/ic_right_arrow_circular"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_timelapse_auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_trigger"
+        android:gravity="center"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:id="@+id/icon_timelapse_auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mg_10"
+            android:src="@drawable/ic_time_lapse"
+            />
+
+        <TextView
+            android:id="@+id/lbl_timelapse_auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="@string/timelapse"
+            android:textSize="@dimen/mg_15"
+            android:padding="@dimen/mg_5"
+            android:layout_toRightOf="@+id/icon"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black"
+            android:drawableRight="@drawable/ic_right_arrow_circular"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_timelapse"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/mg_20"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:id="@+id/icon_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mg_10"
+            android:src="@drawable/ic_control"
+            />
+
+        <TextView
+            android:id="@+id/lbl_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="@string/control_devices"
+            android:textSize="@dimen/mg_15"
+            android:padding="@dimen/mg_5"
+            android:layout_toRightOf="@+id/icon"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/all_devices"
+        android:background="@color/white"
+        android:textSize="@dimen/mg_15"
+        android:textColor="@color/black_black"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingLeft="@dimen/mg_10"
+        />
+
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+    <!--android:id="@+id/swipeToRefresh"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!---->
+    <!--&gt;-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_auto_action"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_qrcode"
+        android:paddingTop="@dimen/mg_10"
+        android:scrollbars="vertical"/>
+
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+
+
+
+
+
+
+</LinearLayout>

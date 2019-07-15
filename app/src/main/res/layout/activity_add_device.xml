@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/add_device_id"
+    >
+
+    <include
+        android:id="@+id/toolbar_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/toolbar_top"/>
+
+    <LinearLayout
+        android:id="@+id/linear_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            style="?android:attr/borderlessButtonStyle"
+            android:drawableLeft="@drawable/ic_back_btn"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Device"
+            android:gravity="center_horizontal"
+            />
+
+    </LinearLayout>
+
+    <!--<Button-->
+    <!--android:id="@+id/btn_qrcode"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="scan qr code"-->
+    <!--android:layout_below="@+id/toolbar_add"-->
+    <!--/>-->
+
+    <!--<ListView-->
+    <!--android:id="@+id/list_prod"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/btn_qrcode"-->
+    <!--&gt;-->
+
+    <!--</ListView>-->
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_add"
+        android:scrollbars="vertical"/>
+
+
+
+
+
+</RelativeLayout>

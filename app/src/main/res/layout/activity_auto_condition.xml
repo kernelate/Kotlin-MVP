@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_30"
+    android:id="@+id/auto_cond"
+    >
+
+    <include
+        android:id="@+id/toolbar_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/toolbar_top"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_condition_perform"
+        android:textSize="16sp"
+        android:layout_margin="@dimen/mg_10"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_add"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/lbl_temperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/temperature"
+            android:textSize="@dimen/mg_15"
+            android:layout_margin="@dimen/mg_10"
+            android:layout_toRightOf="@+id/icon"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black"
+            android:drawableRight="@drawable/ic_right_arrow_circular"
+            />
+
+        <TextView
+            android:id="@+id/lbl_humidity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/humidity"
+            android:textSize="@dimen/mg_15"
+            android:layout_margin="@dimen/mg_10"
+            android:layout_toRightOf="@+id/icon"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black"
+            android:drawableRight="@drawable/ic_right_arrow_circular"
+            />
+
+        <TextView
+            android:id="@+id/lbl_weather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/weather"
+            android:textSize="@dimen/mg_15"
+            android:layout_margin="@dimen/mg_10"
+            android:layout_toRightOf="@+id/icon"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black"
+            android:drawableRight="@drawable/ic_right_arrow_circular"
+            />
+
+        <TextView
+            android:id="@+id/lbl_sun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sun"
+            android:textSize="@dimen/mg_15"
+            android:layout_margin="@dimen/mg_10"
+            android:layout_toRightOf="@+id/icon"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black"
+            android:drawableRight="@drawable/ic_right_arrow_circular"
+            />
+
+        <TextView
+            android:id="@+id/lbl_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/schedule"
+            android:textSize="@dimen/mg_15"
+            android:layout_margin="@dimen/mg_10"
+            android:layout_toRightOf="@+id/icon"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black"
+            android:drawableRight="@drawable/ic_right_arrow_circular"
+            />
+
+        <TextView
+            android:id="@+id/lbl_device"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/device"
+            android:textSize="@dimen/mg_15"
+            android:layout_margin="@dimen/mg_10"
+            android:layout_toRightOf="@+id/icon"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black"
+            android:drawableRight="@drawable/ic_right_arrow_circular"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
